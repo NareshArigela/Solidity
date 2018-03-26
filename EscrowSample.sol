@@ -55,7 +55,7 @@ function EscrowSample(address _buyerAddress, address _sellerAddress) public {
         } else if (msg.sender == mSellerAddress){
             mSellerAccept = false;
         }
-        // if both buyer and seller would like to cancel, money is returned to buyer 
+        // if both buyer and seller would like to cancel the permission, money is returned to buyer 
         if (!mBuyerAccept && !mSellerAccept){
             selfdestruct(mBuyerAddress);
         }
